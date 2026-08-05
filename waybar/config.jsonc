@@ -6,7 +6,7 @@
 
   "modules-left": ["custom/launcher", "hyprland/workspaces"],
   "modules-center": ["clock"],
-  "modules-right": ["pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray", "custom/logout"],
+  "modules-right": ["custom/clipboard", "pulseaudio", "network", "cpu", "memory", "temperature", "battery", "tray", "custom/logout"],
 
   "custom/launcher": {
     "format": "󰣇",
@@ -35,6 +35,12 @@
   "cpu": {
     "format": "  {usage}%",
     "interval": 2
+  },
+
+  "custom/clipboard": {
+    "format": "",
+    "tooltip": "Clipboard history",
+    "on-click": "cliphist list | wofi --dmenu | cliphist decode | wl-copy"
   },
 
   "memory": {
